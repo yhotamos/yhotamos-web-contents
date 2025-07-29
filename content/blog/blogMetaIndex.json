@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "generatedAt": "2025-07-29T14:30:37.513Z",
+  "count": 1,
+  "posts": [
+    {
+      "id": "6q2ybdpok8",
+      "slug": "node_js製cliツールをnpmで公開する方法",
+      "title": "Node.js製CLIツールをnpmで公開する方法",
+      "date": "2025-07-29",
+      "updated": "2025-07-29",
+      "summary": "Node.js 製の CLI ツールを公開するための基本的な流れ",
+      "tags": [
+        "cli",
+        "node.js",
+        "npm"
+      ],
+      "version": "1.0.0",
+      "contentPath": "content/blog/20250729_node_js製cliツールをnpmで公開する方法/index.md",
+      "contentSha256": "b20713191277c00c3d004ceb3d842463247b9df6805a0c1a0c7b6fab879a86e6",
+      "dirName": "20250729_node_js製cliツールをnpmで公開する方法"
+    }
+  ]
+}
