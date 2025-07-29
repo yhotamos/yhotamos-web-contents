@@ -1,0 +1,22 @@
+{
+  "name": "yhotamos-web-contents",
+  "version": "1.0.0",
+  "description": "web contents for yhotamos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "new:blog": "tsx scripts/createBlogPost.ts",
+    "build:blog": "tsx scripts/generateBlogMetaIndex.ts"
+  },
+  "keywords": [],
+  "author": "yhotamos",
+  "license": "ISC",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
