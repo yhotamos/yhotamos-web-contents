@@ -74,7 +74,7 @@ function generateBlogMetaIndex(): void {
       slug: String(data.slug || fallbackTitle),
       title: String(data.title || fallbackTitle),
       date: String(data.date || dateFromDir || "date missing"),
-      updated: String(data.updateDate || data.updated || data.date || dateFromDir || "date missing" ),
+      updated: String(data.updateDate || data.updated || data.date || dateFromDir || "date missing"),
       summary,
       tags,
       thumbnail: data.thumbnail ? String(data.thumbnail) : undefined,
@@ -86,10 +86,18 @@ function generateBlogMetaIndex(): void {
     };
 
     metas.push(meta);
+
+    // index.md の raw.mdファイル(本文のみ)を同じ階層に出力
+    const rawMdPath = path.join(dirPath, "raw.md");
+    // 存在しなければ出力
+    if (!fs.existsSync(rawMdPath)) {
+      fs.writeFileSync(rawMdPath, content);
+    }
+
   }
 
   // 公開日で降順ソート
-  metas.sort((a , b) => (a.date < b.date ? 1 : -1));
+  metas.sort((a, b) => (a.date < b.date ? 1 : -1));
 
   const payload = {
     version: 1,
